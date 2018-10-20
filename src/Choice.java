@@ -56,14 +56,16 @@ public class Choice {
 		int average = 0;
 		int minimum = 0;
 		int maximum = 0;
+		int number = 0;
 		
 		boolean terminate = false;
 		
-		while (terminate = false)	{
+		while (terminate == false)	{
 			Scanner userNumber = new Scanner(System.in);
 			System.out.println("Enter a number or enter ''-1'' to finish.");
+			number = userNumber.nextInt();
 			
-			if	(userNumber.equals("-1"))	{
+			if	(number == -1)	{
 				terminate = true;
 			}
 			
