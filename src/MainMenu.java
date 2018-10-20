@@ -24,7 +24,7 @@ public class MainMenu {
 			System.out.print("Enter a choice: ");
 			choice = i.nextInt();
 			if (choice == 1)
-				Choice.option1();
+				Choice.score();
 			if (choice == 2) {
 				int lower;
 				int upper;
@@ -39,11 +39,11 @@ public class MainMenu {
 				Choice.option3();
 			if (choice == 4)
 				Choice.option4();
-			if ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4))	{
+			if ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4)) {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
 				System.out.println("Type in correct number");
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
-				
+
 			}
 
 		} while (choice != 4);

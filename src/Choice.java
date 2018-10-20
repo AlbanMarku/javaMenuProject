@@ -33,24 +33,45 @@ public class Choice {
 			System.out.println("Type in valid numbers");
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~");
 		}
+
+		System.out.println("Value" + "\t" + "Sqaure" + "\t" + "Cube" + "\t" + "Square Root");
 		for (int x = lower; x <= upper; x++) {
+			double value = x;
 			double squared = Math.pow(x, 2);
 			double cube = Math.pow(x, 3);
 			double squareRoot = Math.sqrt(x);
-			System.out.println(squared);
-			System.out.println(cube);
-			System.out.println(squareRoot);
+			System.out.format("%.2f", value);
+			System.out.print("\t");
+			System.out.format("%.2f", Math.pow(x, 2));
+			System.out.print("\t");
+			System.out.format("%.2f", Math.pow(x, 3));
+			System.out.print("\t");
+			System.out.format("%.2f%n", Math.sqrt(x));
 		}
 
 	}
 
 	public static void option3() {
-		int total;
-		int average;
-		int minimum;
-		int maximum;
-		Scanner calculate = new Scanner(System.in);
-		System.out.println("Enter a value");
+		int total = 0;
+		int average = 0;
+		int minimum = 0;
+		int maximum = 0;
+		
+		boolean terminate = false;
+		
+		while (terminate = false)	{
+			Scanner userNumber = new Scanner(System.in);
+			System.out.println("Enter a number or enter ''-1'' to finish.");
+			
+			if	(userNumber.equals("-1"))	{
+				terminate = true;
+			}
+			
+			else	{
+				// Run the calculations.
+			}
+			
+		}
 		
 	}
 
