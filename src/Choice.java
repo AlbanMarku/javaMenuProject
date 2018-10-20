@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Choice {
 
-	public static void option1() {
+	public static void score() {
 		int gradeNumber = 0;
 		Scanner iGrade = new Scanner(System.in);
 		System.out.println("Enter a number:");
@@ -45,7 +45,13 @@ public class Choice {
 	}
 
 	public static void option3() {
-		System.out.println("Executing option 3");
+		int total;
+		int average;
+		int minimum;
+		int maximum;
+		Scanner calculate = new Scanner(System.in);
+		System.out.println("Enter a value");
+		
 	}
 
 	public static void option4() {
