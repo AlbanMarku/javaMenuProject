@@ -1,21 +1,30 @@
 import java.util.Scanner;
 
 public class MainMenu {
-
+	/**
+	 * 
+	 * @param args Main method calling userChoices.
+	 */
 	public static void main(String[] args) {
 		MainMenu menu = new MainMenu();
 		menu.processUserChoices();
 	}
 
+	/**
+	 * Prints menu.
+	 */
 	public void displayMenu() {
 		System.out.println("-------------");
-		System.out.println("Option 1");
-		System.out.println("Option 2");
-		System.out.println("Option 3");
-		System.out.println("Exit 4");
+		System.out.println("1: Grade percentage");
+		System.out.println("2: Maths table");
+		System.out.println("3: Average, total, minimum, maximum");
+		System.out.println("4:Exit");
 		System.out.println("-------------");
 	}
 
+	/**
+	 * Calls relevant choices and includes lower and upper bound variables.
+	 */
 	public void processUserChoices() {
 		int choice;
 		do {
@@ -45,7 +54,9 @@ public class MainMenu {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
 
 			}
-
+			/**
+			 * Will loop until user exits.
+			 */
 		} while (choice != 4);
 
 	}

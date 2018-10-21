@@ -1,12 +1,17 @@
 import java.util.Scanner;
 
 public class Choice {
-
+/**
+ * Calculates what grade the percentage is by comparing if values fall in a range.
+ */
 	public static void score() {
 		int gradeNumber = 0;
 		Scanner iGrade = new Scanner(System.in);
 		System.out.println("Enter a number:");
 		do {
+			/**
+			 * Prints only when value is invalid.
+			 */
 			if ((gradeNumber < 0) || (gradeNumber > 100)) {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 				System.out.println("Invalid percentage. Try again.");
@@ -26,14 +31,23 @@ public class Choice {
 		else if (gradeNumber > 69 && gradeNumber <= 100)
 			System.out.println("A");
 	}
-
+/**
+ * 
+ * @param lower generated when user is asked for lower bound.
+ * @param upper generated when user is asked for higher bound.
+ */
 	public static void bounds(int lower, int upper) {
 		if (upper <= lower) {
+			/**
+			 * Error message.
+			 */
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~");
 			System.out.println("Type in valid numbers");
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~");
 		}
-
+/**
+ * Calculates the values and arranges them into a table.
+ */
 		System.out.println("Value" + "\t" + "Sqaure" + "\t" + "Cube" + "\t" + "Square Root");
 		for (int x = lower; x <= upper; x++) {
 			double value = x;
@@ -50,10 +64,12 @@ public class Choice {
 		}
 
 	}
-
+/**
+ * Method calculating min, max, etc.
+ */
 	public static void option3() {
-		int total = 0;
-		int average = 0;
+		double total = 0;
+		double average = 0;
 		int minimum = 0;
 		int maximum = 0;
 		int number = 0;
@@ -65,22 +81,48 @@ public class Choice {
 			Scanner userNumber = new Scanner(System.in);
 			System.out.println("Enter a number or enter ''-1'' to finish.");
 			number = userNumber.nextInt();
-			if (number != -1)
-				count++;
-
+			/**
+			 * Adds one to the count every time an input is detected.
+			 */
+			count++;
+/**
+ * Terminates the process if true.
+ */
 			if (number == -1)
 				terminate = true;
 
-			else {
+			if (count == 1) {
+				minimum = number;
+				maximum = number;
+			}
+
+			if (number != -1) {
+/**
+ * Determines if values are maximum or minimum.
+ */
+				if (number < minimum)
+					minimum = number;
+
+				if (number > maximum)
+					maximum = number;
+/**
+ * Calculations are made.
+ */
 				total = total + number;
 				average = total / count;
 			}
 		}
-
+/**
+ * Prints final calculations.
+ */
 		System.out.println("total=" + total);
 		System.out.println("average=" + average);
+		System.out.println("Minimum=" + minimum);
+		System.out.println("Maximum=" + maximum);
 	}
-
+/**
+ * Exit message.
+ */
 	public static void option4() {
 		System.out.println("Shutting down");
 	}
