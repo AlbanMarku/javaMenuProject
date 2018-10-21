@@ -57,24 +57,28 @@ public class Choice {
 		int minimum = 0;
 		int maximum = 0;
 		int number = 0;
-		
+		int count = 0;
+
 		boolean terminate = false;
-		
-		while (terminate == false)	{
+
+		while (terminate == false) {
 			Scanner userNumber = new Scanner(System.in);
 			System.out.println("Enter a number or enter ''-1'' to finish.");
 			number = userNumber.nextInt();
-			
-			if	(number == -1)	{
+			if (number != -1)
+				count++;
+
+			if (number == -1)
 				terminate = true;
+
+			else {
+				total = total + number;
+				average = total / count;
 			}
-			
-			else	{
-				// Run the calculations.
-			}
-			
 		}
-		
+
+		System.out.println("total=" + total);
+		System.out.println("average=" + average);
 	}
 
 	public static void option4() {
